@@ -1,6 +1,3 @@
-export const onlyNumber = (value: string) => {
-  return /[0-9]/.test(value) || value.length > 1;
-};
 /**
  * input의 value가 only number type인지 체크하는 함수
  *
@@ -40,4 +37,40 @@ export const valueNullChecker = (obj: any) => {
     }
   }
   return true;
+};
+
+/**
+ * email Form에 맞는지 유효성 검사
+ */
+
+export const isEmailForm = (asValue: any) => {
+  const regExp = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
+  return regExp.test(asValue); // 형식에 맞는 경우 true 리턴
+};
+
+/**
+ * phone Form에 맞는지 유효성 검사
+ */
+
+export const isCellPhoneForm = (asValue: any, hyphen = false) => {
+  const regExp = hyphen ? /^01(?:0|1|[6-9])-(?:\d{3}|\d{4})-\d{4}$/ : /^01(?:0|1|[6-9])(?:\d{3}|\d{4})\d{4}$/;
+  return regExp.test(asValue); // 형식에 맞는 경우 true 리턴
+};
+
+/**
+ * password Form에 맞는지 유효성 검사
+ */
+
+export const isPasswordForm = (asValue: any) => {
+  // const regExp = /^(?=.*\d)(?=.*[a-zA-Z])[0-9a-zA-Z]{8,10}$/; //  8 ~ 10자 영문, 숫자 조합
+  const regExp = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$/; // 8자 이상 영문, 숫자, 특수문자 조합
+  return regExp.test(asValue); // 형식에 맞는 경우 true 리턴
+};
+
+/**
+ * 숫자만 들어오는지 유효성 검사
+ */
+
+export const onlyNumber = (value: any) => {
+  return /[0-9]/.test(value) || value.length > 1;
 };
