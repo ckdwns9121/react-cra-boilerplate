@@ -1,5 +1,5 @@
 import { useQuery, useMutation, useQueryClient, QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { getTodos, postTodo } from "../../apis";
+import { getTodos, postTodo } from "../../api";
 
 export default function TodosContainer() {
   const { isLoading, data, error } = useQuery(["todos"], () => getTodos());

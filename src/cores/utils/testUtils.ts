@@ -1,1 +1,1 @@
-function test() {}
+export function test() {}
