@@ -5,10 +5,12 @@
 ## 설치한 패키지 목록
 
 > yarn add react-router-dom@6  
-> yarn add react-query  
-> yarn add node-sass  
+> yarn add @tanstack/react-query  
+> yarn add @tanstack/react-query-devtools  
 > yarn add @emotion/react  
 > yarn add @emotion/styled  
-> yarn add @reduxjs/toolkit  
+> yarn add node-sass  
+> yarn add react-redux  
+> yarn add @reduxjs/toolkit
 > yarn add axios  
 > yarn add @types/classnames
