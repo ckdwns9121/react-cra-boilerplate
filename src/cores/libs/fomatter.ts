@@ -6,8 +6,13 @@ export function numberFormat(x: any) {
     return "0";
   }
 }
+
+/**
+ * 수치 데이터를 한글로 표현하는 함수입니다.
+ * @param number
+ * @returns ex) 10000만
+ */
 export function numberToKorean(number: number) {
-  // 수치 데이터를 한글 표현으로 변경
   const inputNumber = number < 0 ? 0 : number;
   const unitWords = ["", "만", "억", "조", "경"];
   const splitUnit = 10000;
@@ -28,7 +33,11 @@ export function numberToKorean(number: number) {
   return resultString;
 }
 
-// string을 전화번호 표현(구분자 '-' 추가)으로 변경
+/**
+ * string 문자열을 핸드폰 번호 포멧으로 컨버팅 해주는 함수입니다.
+ * @param tel ex) 01012341234
+ * @returns 010-1234-1234
+ */
 export const telToString = (tel: string) => (tel ? tel.replace("-", "") : "");
 
 export const dateToRelative = (date: string, join = "-") => {
