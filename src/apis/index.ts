@@ -9,11 +9,11 @@ export const getTodos = async () => {
 };
 
 export const getTodo = async (id: string) => {
-  const url = "";
+  const url = `/${id}`;
   const config = {
     headers: {},
   };
   return await axios.get(url, config);
 };
 
-export const postTodo = async () => {};
+export const postTodo = async ({ id, title }: { id: string; title: string }) => {};
