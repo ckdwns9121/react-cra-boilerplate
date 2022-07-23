@@ -2,6 +2,8 @@ import "./App.css";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import MainPage from "./routes/Main/MainPage";
+import AuthPage from "./routes/Auth/AuthPage";
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -19,8 +21,8 @@ function App() {
       <div className="App">
         <BrowserRouter basename={process.env.PUBLIC_URL}>
           <Routes>
-            <Route path="/" element={<MovieList />} />
-            <Route path="/detail/:id" element={<Movie />} />
+            <Route path="/*" element={<MainPage />} />
+            <Route path="/auth/*" element={<AuthPage />} />
           </Routes>
           <ReactQueryDevtools initialIsOpen={process.env.NODE_ENV === "development"} />
         </BrowserRouter>
