@@ -13,7 +13,8 @@
 > yarn add react-redux  
 > yarn add @reduxjs/toolkit
 > yarn add axios  
-> yarn add @types/classnames
+> yarn add @types/classnames  
+> yarn add @mui/material @emotion/react @emotion/styled
 
 ## 디렉토리 구조
 
