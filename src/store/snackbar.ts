@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 export interface SnackbarState {
   open: boolean;
@@ -9,12 +9,12 @@ export interface SnackbarState {
 
 const initialState: SnackbarState = {
   open: false,
-  message: "",
-  variant: "",
+  message: '',
+  variant: '',
 };
 
 export const snackbarSlice = createSlice({
-  name: "snackbar",
+  name: 'snackbar',
   initialState,
   reducers: {
     snackbarOpen: (state, action: PayloadAction<string>) => {
@@ -23,7 +23,7 @@ export const snackbarSlice = createSlice({
     },
     snackbarClose: state => {
       state.open = false;
-      state.message = "";
+      state.message = '';
     },
   },
 });

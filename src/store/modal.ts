@@ -1,15 +1,15 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { RootState } from "./index";
-import type { IModal } from "../types/modal";
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { RootState } from './index';
+import type { IModal } from '../types/modal';
 const initialState: IModal = {
   open: false,
-  title: "",
-  content: "",
+  title: '',
+  content: '',
   isConfirm: false,
 };
 
 export const modalSlice = createSlice({
-  name: "modal",
+  name: 'modal',
   initialState,
   reducers: {
     modalOpen: (state, action: PayloadAction<IModal>) => {

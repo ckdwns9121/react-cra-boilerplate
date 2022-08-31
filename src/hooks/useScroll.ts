@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback } from 'react';
 
 type Tick = null | number | NodeJS.Timer;
 let timer: Tick;
@@ -24,10 +24,10 @@ function useScroll() {
   }, [handleScroll]);
   useEffect(() => {
     // scroll event listener 등록
-    window.addEventListener("scroll", throttle);
+    window.addEventListener('scroll', throttle);
     return () => {
       // scroll event listener 해제
-      window.removeEventListener("scroll", throttle);
+      window.removeEventListener('scroll', throttle);
     };
   }, [throttle]);
   return { scrollEnd, setScrollEnd, handleScroll };

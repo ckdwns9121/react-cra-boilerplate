@@ -1,8 +1,8 @@
-import { modalOpen, modalClose } from "../store/modal";
-import { useAppDispatch } from "./useStore";
-import type { IModal } from "../types/modal";
+import { modalOpen, modalClose } from '../store/modal';
+import { useAppDispatch } from './useStore';
+import type { IModal } from '../types/modal';
 
-type ModalPayload = Pick<IModal, "title" | "content" | "isConfirm">;
+type ModalPayload = Pick<IModal, 'title' | 'content' | 'isConfirm'>;
 
 export default function useModal() {
   const dispatch = useAppDispatch();

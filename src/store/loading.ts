@@ -1,5 +1,5 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { RootState } from "./index";
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { RootState } from './index';
 
 interface LoadingState {
   open: boolean;
@@ -9,7 +9,7 @@ const initialState: LoadingState = {
 };
 
 export const loadingSlice = createSlice({
-  name: "loading",
+  name: 'loading',
   initialState,
   reducers: {
     loadingOpen: state => {
