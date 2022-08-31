@@ -1,5 +1,5 @@
-import type { ITodoItem } from "../../types/todo";
-import TodoItem from "./TodoItem";
+import type { ITodoItem } from '../../types/todo';
+import TodoItem from './TodoItem';
 
 interface ITodoList {
   todos: ITodoItem[];
