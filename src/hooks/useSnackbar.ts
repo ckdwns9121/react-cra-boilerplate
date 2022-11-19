@@ -1,5 +1,5 @@
-import { snackbarOpen, snackbarClose } from '../store/snackbar';
-import { useAppDispatch } from '../hooks/useStore';
+import { snackbarOpen, snackbarClose } from "../store/snackbar";
+import { useAppDispatch } from "../hooks/useStore";
 let timer: NodeJS.Timeout | null;
 
 export default function useSnackbar() {

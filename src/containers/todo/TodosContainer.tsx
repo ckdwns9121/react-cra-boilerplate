@@ -4,17 +4,17 @@ import {
   useQueryClient,
   QueryClient,
   QueryClientProvider,
-} from '@tanstack/react-query';
-import { getTodos, postTodo } from '../../api';
+} from "@tanstack/react-query";
+import { getTodos, postTodo } from "../../api";
 
 export default function TodosContainer() {
-  const { isLoading, data, error } = useQuery(['todos'], () => getTodos());
+  const { isLoading, data, error } = useQuery(["todos"], () => getTodos());
   const queryClient = useQueryClient();
 
   const mutation = useMutation(postTodo, {
     onSuccess: () => {
       // Invalidate and refetch
-      queryClient.invalidateQueries(['todos']);
+      queryClient.invalidateQueries(["todos"]);
     },
   });
 
@@ -27,8 +27,8 @@ export default function TodosContainer() {
       <button
         onClick={() => {
           mutation.mutate({
-            id: '1',
-            title: 'title test',
+            id: "1",
+            title: "title test",
           });
         }}
       >

@@ -1,5 +1,5 @@
-import { loadingOpen, loadingClose } from '../store/loading';
-import { useAppDispatch } from '../hooks/useStore';
+import { loadingOpen, loadingClose } from "../store/loading";
+import { useAppDispatch } from "../hooks/useStore";
 
 export default function useLoading() {
   const dispatch = useAppDispatch();
