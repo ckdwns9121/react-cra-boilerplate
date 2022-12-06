@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { getTodo } from "../../api/index";
+import { getTodo } from "../../api/todo";
 
 interface Props {
   id: string;
