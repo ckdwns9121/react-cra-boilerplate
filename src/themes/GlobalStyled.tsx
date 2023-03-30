@@ -33,32 +33,12 @@ const reset = css`
     font-family: "Noto Sans KR", sans-serif;
     padding: 0;
     margin: 0;
-    background-color: var(--bkColor2);
+    background-color: var(--white);
     width: 100%;
     height: 100%;
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* justify-content: center; */
-    /* overflow: hidden; */
   }
   :root {
-    --bkColor1: #111111;
-    --bkColor2: #232323;
-    --bkColor3: #2b2b2b;
-    --bkColor4: #303030;
-    --bkColor5: #494949;
-    --mainColor: #2d8ceb;
-    --warning: #ff5b5b;
-    --custom: #56eab4;
-    --txtColor1: #ffffff;
-    --txtColor2: #b9b9b9;
-    --txtColor3: #8a8a8a;
-    --txtColor4: #787878;
-    --txtColor5: #494949;
-    --timelineHeight: 48px;
-    --bottomLineHeight: 30px;
-    --bottomNavHeight: 72px;
-    --mainHeight: 380px;
+    --white: "#fff";
   }
   a {
     text-decoration: none;
@@ -73,44 +53,7 @@ const reset = css`
       color: #fff !important;
     }
   }
-  .MuiSnackbar-root {
-    bottom: 70px !important;
-    height: 10px;
-    &.default {
-      .MuiPaper-elevation {
-        background-color: #111 !important;
-      }
-    }
-    &.success {
-      .MuiPaper-elevation {
-        background-color: #2d8ceb !important;
-      }
-    }
-    &.error {
-      .MuiPaper-elevation {
-        background-color: #ff5b5b !important;
-      }
-    }
-    &.warning {
-      .MuiPaper-elevation {
-        background-color: #ff925d !important;
-      }
-    }
-  }
-  .MuiPaper-elevation {
-    /* background-color: rgba(255, 91, 91, 0.9) !important; */
-    /* background-color: #111 !important; */
-    height: 35px !important ;
-    min-width: 466px !important;
-    .MuiSnackbarContent-message {
-      color: #fff;
-      font-size: 14px;
-      padding: 0;
-    }
-  }
-  text {
-    display: none;
-  }
+
   @supports (font-variation-settings: normal) {
     html {
       font-family: "Inter var", sans-serif;
