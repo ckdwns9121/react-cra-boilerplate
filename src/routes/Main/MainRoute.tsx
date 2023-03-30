@@ -1,5 +1,6 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route } from "react-router-dom";
+import { Button } from "@mui/material";
 
 export default function MainRoute() {
-  return <>Main Page</>;
+  return <Button>Main Page</Button>;
 }
